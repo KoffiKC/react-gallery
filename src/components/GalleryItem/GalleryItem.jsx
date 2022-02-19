@@ -1,4 +1,4 @@
-function Galleryitem () {
+function Galleryitem (onePic) {
     return(
         <>  
             <div>
