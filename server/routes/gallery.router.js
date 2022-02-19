@@ -3,6 +3,10 @@ const router = express.Router();
 const galleryItems = require('../modules/gallery.data');
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
+// GET Route
+router.get('/', (req, res) => {
+    res.send(galleryItems);
+}); // END GET Route
 
 // PUT Route
 router.put('/like/:id', (req, res) => {
@@ -19,9 +23,5 @@ router.put('/like/:id', (req, res) => {
     res.sendStatus(200);
 }); // END PUT Route
 
-// GET Route
-router.get('/', (req, res) => {
-    res.send(galleryItems);
-}); // END GET Route
 
 module.exports = router;
