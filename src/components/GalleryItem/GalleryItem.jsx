@@ -1,18 +1,25 @@
-// const galleryItems = require("../../../server/modules/gallery.data")
+import { useState } from 'react';
 
-function GalleryItem ({id, path, likes, updateLikes}) {
+
+function GalleryItem ({id, path, likes, desc, updateLikes}) {
     console.log('all the item tings', id, path, likes);
 
+    const [toggleDesc, setToggleDesc] = useState(false);
 
     const handleClick = () => {
         console.log('we clickin', id)
         updateLikes(id)
     }
 
+    const handleToggle = () => {
+
+        setToggleDesc(!toggleDesc)
+    }
+
     return(
         <>  
             <div key={id}>
-                <img src="images/goat_small.jpg" alt="" />
+                {toggleDesc ? <p onClick={handleToggle}>{desc}</p> : <img onClick={handleToggle} src={path} alt={desc}/>}
                 <button onClick={handleClick}>do you liek et?</button>
                 <p>we have {likes} lieks :)</p>
             </div>

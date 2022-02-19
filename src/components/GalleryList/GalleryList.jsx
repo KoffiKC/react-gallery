@@ -10,6 +10,7 @@ function GalleryList ({allPics, updateLikes}) {
                 id={picture.id}
                 key={picture.id}
                 path={picture.path}
+                desc={picture.description}
                 likes={picture.likes}
                 updateLikes={updateLikes}/>
                 )}
