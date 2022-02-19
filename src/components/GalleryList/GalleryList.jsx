@@ -2,7 +2,6 @@ import GalleryItem from '../GalleryItem/GalleryItem'
 
 
 function GalleryList ({allPics, updateLikes}) {
-    console.log(allPics);
     return(
         <>
             {allPics.map(picture => 

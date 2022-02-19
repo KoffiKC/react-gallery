@@ -2,8 +2,7 @@ import { useState } from 'react';
 
 
 function GalleryItem ({id, path, likes, desc, updateLikes}) {
-    console.log('all the item tings', id, path, likes);
-
+    
     const [toggleDesc, setToggleDesc] = useState(false);
 
     const handleClick = () => {

@@ -21,7 +21,6 @@ function App() {
     axios.get('/gallery')
       .then(response => {
         console.log('we got all them pics');
-        console.log('this is what we see', response.data);
         setAllDaPics(response.data)
         //RENDER FUNCTION HERE
       }).catch(err => {
@@ -39,14 +38,11 @@ function App() {
     axios.put(`/gallery/like/${id}`)
       .then(response => {
         getPics()
-       console.log("this is put log", allDaPics[0].id);
       }).catch(err => {
         console.log('looks like no one likes', err);
       })
   }
 
-
-  console.log('this is what we get', allDaPics);
   return (
     <div className="App">
       <header className="App-header">
