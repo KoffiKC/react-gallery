@@ -1,7 +1,7 @@
 import GalleryItem from '../GalleryItem/GalleryItem'
 
 
-function GalleryList ({allPics}) {
+function GalleryList ({allPics, updateLikes}) {
     console.log(allPics);
     return(
         <>
@@ -10,7 +10,8 @@ function GalleryList ({allPics}) {
                 id={picture.id}
                 key={picture.id}
                 path={picture.path}
-                likes={picture.likes}/>
+                likes={picture.likes}
+                updateLikes={updateLikes}/>
                 )}
         </>
     )
