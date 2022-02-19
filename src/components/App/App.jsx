@@ -32,9 +32,11 @@ function App() {
 
   // POST oh wait
   // PUT 
+
+  
   const updateLikes = (id) => {
     console.log('ooh this is the put');
-    console.log(allDaPics[0].likes);
+
     axios.put(`/gallery/like/${id}`)
       .then(response => {
         getPics()
@@ -49,7 +51,7 @@ function App() {
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       <p>Gallery goes here</p>
-      <GalleryList allPics = {allDaPics} updateLikes={updateLikes}/>
+      <GalleryList allPics ={allDaPics} updateLikes={updateLikes}/>
       {/* <button onClick={updateLikes}>hmm</button>
       <img src="images/goat_small.jpg" /> */}
     </div>
