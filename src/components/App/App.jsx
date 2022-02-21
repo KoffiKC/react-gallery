@@ -37,7 +37,10 @@ function App() {
   const updateLikes = (id) => {
     console.log('ooh this is the put');
 
-    axios.put(`/gallery/like/${id}`)
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${allDaPics[0].id}`
+    })
       .then(response => {
         getPics()
       }).catch(err => {
