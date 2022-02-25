@@ -39,7 +39,7 @@ function App() {
 
     axios({
       method: 'PUT',
-      url: `/gallery/like/${allDaPics[0].id}`
+      url: `/gallery/like/${id}`
     })
       .then(response => {
         getPics()
